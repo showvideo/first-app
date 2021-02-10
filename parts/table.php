@@ -21,17 +21,17 @@
 <tr>
     <!--お名前-->
     <td onclick="window.location='input/name.php/<?php echo $id ?>/'"  
-     style="height:50px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></a>
+     style="height:50px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?>
      </td>
            
      <!--来所-->
     <td onclick="window.location='input/visit.php/<?php echo $id ?>/'"  
-     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $visit; ?></a>
+     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $visit; ?>
      </td>
         
      <!--退所-->
     <td onclick="window.location='input/exit.php/<?php echo $id ?>/'"  
-     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $exits; ?></a>
+     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $exits; ?>
      </td>
         
      <!--最高・最低血圧/脈拍-->
@@ -40,29 +40,27 @@
      <?php if(isset($maxblood) || ($miniblood) ||( $pulse)){
          echo $maxblood."/".$miniblood."/".$pulse;
      }
-      ?></a>
+      ?>
      </td>
         
       <!--入浴-->
      <td  
-     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $bath; ?></a>
+     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $bath; ?>
      </td>
         
         
       <!--食事-->
     <td   
-     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal; ?></a>
+     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal; ?>
      </td>
         
       <!--特記事項-->
     <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  
-     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo mb_strimwidth($notices, 0, 7, '…', 'UTF-8'); ?></a>
+     style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo mb_strimwidth($notices, 0, 7, '…', 'UTF-8'); ?>
      </td>
         
     </tr>
 <tbody>
-
-
 <?php 
                 
       }
