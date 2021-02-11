@@ -44,7 +44,7 @@
      
      <td style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal; ?></td>
         
-     <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo mb_strimwidth($notices, 0, 7, '…', 'UTF-8'); ?>
+     <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $notices; ?>
      </td>
 <?php 
                 
