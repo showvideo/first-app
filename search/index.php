@@ -13,16 +13,16 @@ $stt->bindParam(':maxblood', $_POST['maxblood']);
 $stt->execute();
     while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
         
-        $id=$row['id'];
-        $name=$row['name']; 
-        $visit=$row['visit']; 
-        $exits=$row['exits']; 
-        $maxblood=$row['maxblood'];
-        $miniblood=$row['miniblood'];
-        $pulse=$row['pulse'];
-        $bath=$row['bath']; 
-        $meal=$row['meal']; 
-        $notices=$row['notices'];
+        $id=e($row['id']);
+        $name=e($row['name']); 
+        $visit=e($row['visit']); 
+        $exits=e($row['exits']); 
+        $maxblood=e($row['maxblood']);
+        $miniblood=e($row['miniblood']);
+        $pulse=e($row['pulse']);
+        $bath=e($row['bath']); 
+        $meal=e($row['meal']); 
+        $notices=e($row['notices']);
 ?>  
 <tr>
     <!--お名前-->
@@ -77,20 +77,20 @@ $stt->execute();
 require_once('../parts/th.php'); 
 $db = getDB();
 $stt = $db->prepare('SELECT * FROM user WHERE maxblood <= :maxblood');
-$stt->bindParam(':maxblood', $_POST['maxblood']);
+$stt->bindParam(':maxblood', e($_POST['maxblood']));
 $stt->execute();
     while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
         
-        $id=$row['id'];
-        $name=$row['name']; 
-        $visit=$row['visit']; 
-        $exits=$row['exits']; 
-        $maxblood=$row['maxblood'];
-        $miniblood=$row['miniblood'];
-        $pulse=$row['pulse'];
-        $bath=$row['bath']; 
-        $meal=$row['meal']; 
-        $notices=$row['notices'];
+        $id=e($row['id']);
+        $name=e($row['name']); 
+        $visit=e($row['visit']); 
+        $exits=e($row['exits']); 
+        $maxblood=e($row['maxblood']);
+        $miniblood=e($row['miniblood']);
+        $pulse=e($row['pulse']);
+        $bath=e($row['bath']); 
+        $meal=e($row['meal']); 
+        $notices=e($row['notices']);
 ?>  
 <tr>
     <!--お名前-->
