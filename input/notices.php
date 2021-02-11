@@ -11,7 +11,7 @@ try {
   $stt->bindParam(':id', $id);
   $stt->execute();
   while($row = $stt->fetch(PDO::FETCH_ASSOC)) {
-    $notices = $row['notices'];
+    $notices = e($row['notices']);
   }
 } catch (PDOException $e) {
   echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
@@ -41,7 +41,7 @@ if(isset($_POST['notices'])){
 try {
     $sql = "UPDATE user SET notices = :notices where id = :id";
     $stt = getDB()->prepare($sql);
-    $stt->bindParam(':notices', $_POST['notices']);
+    $stt->bindParam(':notices', e($_POST['notices']));
     $stt->bindParam(':id', $id);
     $stt->execute();
     header('Location: https://animech2.herokuapp.com/');
