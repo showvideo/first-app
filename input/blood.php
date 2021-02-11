@@ -23,7 +23,7 @@
 </form>
 </div>
 <?php
-if(isset($_POST['maxblo'])){
+if(isset($_POST['form-control'])){
 
 try {
     $sql = "UPDATE user SET maxblood = :maxblood where id = :id";
@@ -38,7 +38,7 @@ try {
 }
   
 }
-if(isset($_POST['minblo'])){
+if(isset($_POST['form-control'])){
  
     try {
         $sql = "UPDATE user SET minblood = :minblood where id = :id";
@@ -53,7 +53,7 @@ if(isset($_POST['minblo'])){
 
     }
 
-    if(isset($_POST['pulse'])){
+    if(isset($_POST['form-control'])){
 
         try {
             $sql = "UPDATE user SET pulse = :pulse where id = :id";
