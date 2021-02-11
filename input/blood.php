@@ -11,11 +11,11 @@
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
     <p style="margin-top:20px;">最低血圧</p>
-    <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" style="width:140px;">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
     <p style="margin-top:20px;">脈拍</p>
-    <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" style="width:140px;margin-top:20px;">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;margin-top:20px;">
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
   </div>
   <button type="submit" class="btn btn-primary" style="margin-left:340px;">送信</button>
@@ -27,7 +27,7 @@ if(isset($_POST['form-control'])){
 
 try {
     $stt = getDB()->prepare('UPDATE user SET maxblood = :maxblood where id = :id');
-    $stt->bindParam(':maxblood', $_POST['#exampleInputEmail1']);
+    $stt->bindParam(':maxblood', $_POST['form-control']);
     $stt->bindParam(':id', $id);
     $stt->execute();
     header('Location: https://animech2.herokuapp.com/);
