@@ -13,18 +13,18 @@
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
     <p style="margin-top:20px;">最低血圧</p>
-    <input type="text" class="form-control" name="minblo"id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
+    <input type="text" class="form-control" name="minblo" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
     <p style="margin-top:20px;">脈拍</p>
-    <input type="text" class="form-control" name="palse" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;margin-top:20px;">
+    <input type="text" class="form-control" name="pulse" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;margin-top:20px;">
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
   </div>
   <button type="submit" class="btn btn-primary" style="margin-left:340px;">送信</button>
 </form>
 </div>
 <?php
-if(isset($_POST['form-control'])){
+if(isset($_POST['maxblo'])){
  
 try {
     $sql = "UPDATE user SET maxblood = :maxblood where id = :id";
@@ -32,14 +32,14 @@ try {
     $stt->bindParam(':maxblood', e($_POST['maxblo']));
     $stt->bindParam(':id', $id);
     $stt->execute();
-    header('Location: http://localhost/note/');
+    header('Location: https://animech2.herokuapp.com/);
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
   
 }
 
-if(isset($_POST['form-control1'])){
+if(isset($_POST['minblo'])){
  
     try {
         $sql = "UPDATE user SET minblood = :minblood where id = :id";
@@ -47,22 +47,22 @@ if(isset($_POST['form-control1'])){
         $stt->bindParam(':minblood', e($_POST['minblo']));
         $stt->bindParam(':id', $id);
         $stt->execute();
-        header('Location: http://localhost/note/');
+        header('Location: https://animech2.herokuapp.com/);
     } catch (PDOException $e) {
         echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
     }
       
     }
 
-    if(isset($_POST['form-contro2'])){
+    if(isset($_POST['pulse'])){
  
         try {
-            $sql = "UPDATE user SET palse = :palse where id = :id";
+            $sql = "UPDATE user SET pulse = :pulse where id = :id";
             $stt = getDB()->prepare($sql);
-            $stt->bindParam(':palse', e($_POST['palse']));
+            $stt->bindParam(':pulse', e($_POST['pulse']));
             $stt->bindParam(':id', $id);
             $stt->execute();
-            header('Location: http://localhost/note/');
+            header('Location: https://animech2.herokuapp.com/');
         } catch (PDOException $e) {
             echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
         }
