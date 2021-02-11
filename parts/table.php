@@ -1,6 +1,5 @@
 <?php require_once("th.php"); ?>  
-<tbody>
-<tr>
+
 <?php
         $db = getDB();
         $stt = $db->prepare('SELECT * FROM user WHERE 1');
@@ -19,6 +18,8 @@
                 $notices=$row['notices'];
             
  ?>
+<tbody>
+<tr>
 
     <td onclick="window.location='input/name.php/<?php echo $id ?>/'"  
      style="height:50px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?>
@@ -46,11 +47,12 @@
         
      <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $notices; ?>
      </td>
+     </tr>
+</tbody>
 <?php 
                 
       }
         
 ?>
-</tr>
-</tbody>
+
 </table>
