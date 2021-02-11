@@ -11,7 +11,6 @@
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
     <p style="margin-top:20px;">最低血圧</p>
-    <input type="text" class="form-control" name="minblo"id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
     <input type="text" class="form-control" name="minblo" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
@@ -28,7 +27,7 @@ if(isset($_POST['form-control'])){
 try {
     $sql = "UPDATE user SET maxblood = :maxblood where id = :id";
     $stt = getDB()->prepare($sql);
-    $stt->bindParam(':maxblood', e($_POST['maxblo']));
+    $stt->bindParam(':maxblood', $_POST['maxblo']);
     $stt->bindParam(':id', $id);
     $stt->execute();
     header('Location: http://localhost/note/');
@@ -43,7 +42,7 @@ if(isset($_POST['form-control'])){
     try {
         $sql = "UPDATE user SET minblood = :minblood where id = :id";
         $stt = getDB()->prepare($sql);
-        $stt->bindParam(':minblood', e($_POST['minblo']));
+        $stt->bindParam(':minblood', $_POST['minblo']);
         $stt->bindParam(':id', $id);
         $stt->execute();
         header('Location: https://animech2.herokuapp.com/);
@@ -58,7 +57,7 @@ if(isset($_POST['form-control'])){
         try {
             $sql = "UPDATE user SET pulse = :pulse where id = :id";
             $stt = getDB()->prepare($sql);
-            $stt->bindParam(':pulse', e($_POST['pulse']));
+            $stt->bindParam(':pulse', $_POST['pulse']);
             $stt->bindParam(':id', $id);
             $stt->execute();
             header('Location: https://animech2.herokuapp.com/);
