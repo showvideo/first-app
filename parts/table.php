@@ -45,7 +45,7 @@
      
      <td style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal; ?></td>
         
-     <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  style="border:1px solid #ccc;background:#fff;padding:4px;"><?php if(isset($notices)){echo '〇'; } ?>
+     <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  style="border:1px solid #ccc;background:#fff;padding:4px;"><?php if(!empty($notices)){echo '〇'; } ?>
      </td>
      </tr>
 </tbody>
