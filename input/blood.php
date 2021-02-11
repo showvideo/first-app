@@ -30,7 +30,6 @@ try {
     $stt->bindParam(':maxblood', $_POST['maxblo']);
     $stt->bindParam(':id', $id);
     $stt->execute();
-    header('Location: http://localhost/note/');
     header('Location: https://animech2.herokuapp.com/);
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
