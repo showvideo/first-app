@@ -2,9 +2,7 @@
 <?php require_once("../parts/header.php"); ?>  
 <?php require_once("../common/function.php"); ?>
 <?php $id = getInfomation(); ?>
-
 <div style="width:500px;margin-left:250px;margin-top:50px;border:solid 1px gray;padding:40px;display:inline-block;">
-
 <form>
     <h4>血圧</h4>
   <div class="form-group" style="margin-top:40px;">
@@ -13,6 +11,7 @@
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
     <p style="margin-top:20px;">最低血圧</p>
+    <input type="text" class="form-control" name="minblo"id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
     <input type="text" class="form-control" name="minblo" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:140px;">
     <small id="emailHelp" class="form-text text-muted">※数字を入力してください</small></br>
 
@@ -25,20 +24,20 @@
 </div>
 <?php
 if(isset($_POST['maxblo'])){
- 
+
 try {
     $sql = "UPDATE user SET maxblood = :maxblood where id = :id";
     $stt = getDB()->prepare($sql);
     $stt->bindParam(':maxblood', e($_POST['maxblo']));
     $stt->bindParam(':id', $id);
     $stt->execute();
+    header('Location: http://localhost/note/');
     header('Location: https://animech2.herokuapp.com/);
 } catch (PDOException $e) {
     echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
 }
   
 }
-
 if(isset($_POST['minblo'])){
  
     try {
@@ -51,18 +50,18 @@ if(isset($_POST['minblo'])){
     } catch (PDOException $e) {
         echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
     }
-      
+
     }
 
     if(isset($_POST['pulse'])){
- 
+
         try {
             $sql = "UPDATE user SET pulse = :pulse where id = :id";
             $stt = getDB()->prepare($sql);
             $stt->bindParam(':pulse', e($_POST['pulse']));
             $stt->bindParam(':id', $id);
             $stt->execute();
-            header('Location: https://animech2.herokuapp.com/');
+            header('Location: https://animech2.herokuapp.com/);
         } catch (PDOException $e) {
             echo "ｴﾗｰﾒｯｾｰｼﾞ:{$e->getMessage()}";
         }
@@ -70,6 +69,4 @@ if(isset($_POST['minblo'])){
         }
         
 ?>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
