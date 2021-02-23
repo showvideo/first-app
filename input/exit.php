@@ -21,9 +21,8 @@ try {
 
 <form action="" method="post">
     <h4>退所時間</h4>
-    <?php if(isset($visit)){
-      echo "現在入力されている時刻は".$exit;
-} ?>
+    <?php if(isset($exit)){ echo "現在入力されている時刻は".$exit; } ?>
+    
   <div class="form-group" style="margin-top:40px;">
     
   <select name="exit">
