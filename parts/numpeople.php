@@ -10,14 +10,17 @@
     $stmt->execute();
     $row = $stmt->fetch();
     $sex = $row["cnt"];
+
 ?>
+
 <?php
 
-$sql = "SELECT count(*) as cnt FROM user WHERE sex=2";
-$stmt = getDB()->prepare($sql);
-$stmt->execute();
-$row = $stmt->fetch();
-$sex1 = $row["cnt"];
+    $sql = "SELECT count(*) as cnt FROM user WHERE sex=2";
+    $stmt = getDB()->prepare($sql);
+    $stmt->execute();
+    $row = $stmt->fetch();
+    $sex1 = $row["cnt"];
+
 ?>
 
 <?php
@@ -27,6 +30,7 @@ $sex1 = $row["cnt"];
     $stmt->execute();
     $row = $stmt->fetch();
     $bath = $row["cnt"];
+
 ?>
 
 <?php
@@ -36,11 +40,19 @@ $sex1 = $row["cnt"];
     $stmt->execute();
     $row = $stmt->fetch();
     $bath = $row["cnt"];
+
 ?>
-<p style="margin-top:20px;margin-left:20px;">男性<?php echo $sex ?>人</p>
-<p style="margin-left:20px;margin-top:0;">女性<?php echo $sex1 ?>人</p>
-<strong style="margin-left:10px;">入浴</strong></br>
-<p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
-<strong style="padding:10px 10px;margin:0;">食事</strong></br>
-<p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
+
+    <p style="margin-top:20px;margin-left:20px;">男性<?php echo $sex ?>人</p>
+
+    <p style="margin-left:20px;margin-top:0;">女性<?php echo $sex1 ?>人</p>
+    
+    <strong style="margin-left:10px;">入浴</strong></br>
+    
+    <p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
+    
+    <strong style="padding:10px 10px;margin:0;">食事</strong></br>
+        
+    <p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
+
 </div>
