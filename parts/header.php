@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-info " style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   
-  <a class="navbar-brand text-white" href="#" style="margin-left:20px;">利用者一覧</a>
+  <a class="navbar-brand text-white" href="#" style="margin-left:20px;font-weight:nomarl;">利用者一覧</a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
