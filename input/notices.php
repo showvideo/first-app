@@ -34,9 +34,10 @@
   <form action="" method="post">
       <h4>特記事項</h4>
       <?php if(isset($notices)){ echo "現在入力されている特記事項、\n".$notices; } ?>
+    
   <div class="form-group" style="margin-top:40px;">
 
-    <textarea name="notices"></textarea>
+    <textarea name="notices" style="resize:none;width:300px;height:200px;"></textarea></br>
       
     <small id="emailHelp" class="form-text text-muted">特記事項を入力してください</small>
 
