@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light bg-light">
   
   <a class="navbar-brand text-white" href="#" style="margin-left:20px;font-weight:nomarl;">利用者一覧</a>
   
