@@ -37,7 +37,7 @@ if(isset($_POST['maxblood'])){
         $stt->bindParam(':maxblood', $_POST['maxblood']);
         $stt->bindParam(':id', $id);
         $stt->execute();
-        header('Location: https://animech2.herokuapp.com/);
+        header('Location: https://first-new-app1.herokuapp.com/);
 
     } catch (PDOException $e) {
     
