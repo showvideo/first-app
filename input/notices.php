@@ -29,7 +29,7 @@
 
 ?>
 
-<div style="width:500px;height:350px;margin-left:30px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
+<div style="width:500px;height:450px;margin-left:30px;margin-top:30px;border:solid 1px gray;padding:40px;display:inline-block;">
 
   <form action="" method="post">
       <h4>特記事項</h4>
