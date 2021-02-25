@@ -53,6 +53,6 @@
     
     <strong style="padding:10px 10px;margin:0;">食事</strong></br>
         
-    <p style="margin-top:10px;margin-left:20px;"><?php echo $bath ?>人</p>
+    <p style="margin-top:10px;margin-left:20px;"><?php echo $meal ?>人</p>
 
 </div>
