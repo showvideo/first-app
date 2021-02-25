@@ -39,7 +39,7 @@
     $stmt = getDB()->prepare($sql);
     $stmt->execute();
     $row = $stmt->fetch();
-    $bath = $row["cnt"];
+    $meal = $row["cnt"];
 
 ?>
 
