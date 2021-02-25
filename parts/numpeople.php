@@ -25,7 +25,7 @@
 
 <?php
 
-    $sql = "SELECT count(bath) as cnt FROM user WHERE 1";
+    $sql = "SELECT count(bath) as cnt FROM user WHERE 〇";
     $stmt = getDB()->prepare($sql);
     $stmt->execute();
     $row = $stmt->fetch();
@@ -35,7 +35,7 @@
 
 <?php
 
-    $sql = "SELECT count(meal) as cnt FROM user WHERE 1";
+    $sql = "SELECT count(meal) as cnt FROM user WHERE 〇";
     $stmt = getDB()->prepare($sql);
     $stmt->execute();
     $row = $stmt->fetch();
