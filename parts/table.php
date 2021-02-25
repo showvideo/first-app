@@ -29,7 +29,10 @@
         
      <td onclick="window.location='input/blood.php/<?php echo $id ?>/'"  
      style="border:1px solid #ccc;background:#fff;padding:4px;">
-     <?php echo $maxblood."/".$miniblood."/".$pulse; ?>
+     <?php if(isset($maxblood) || ($miniblood) ||( $pulse)){
+         echo $maxblood."/".$miniblood."/".$pulse;
+     }
+     ?>
      </td>
     
      <td style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $bath; ?></td>
