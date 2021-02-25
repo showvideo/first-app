@@ -35,7 +35,7 @@
 
 <?php
 
-    $sql = "SELECT count(meal) as cnt FROM user WHERE meal IS NOT NULL";
+    $sql = "SELECT count() as cnt FROM user WHERE meal IS NOT NULL";
     $stmt = getDB()->prepare($sql);
     $stmt->execute();
     $row = $stmt->fetch();
