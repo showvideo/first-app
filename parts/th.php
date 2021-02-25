@@ -1,4 +1,4 @@
-<table border="1" cellspacing="0" style="border-collaspe:collapse;display:inline-block;margin-left:200px;margin-top:40px;vertical-align:top;">
+<table border="1" cellspacing="0" style="border-collaspe:collapse;display:inline-block;margin-left:200px;margin-top:40px;vertical-align:top;margin-bottom:50px;">
     <thead>
     <tr style="background-color:#384D98;">
         <th style="width:120px;height:35px;border:1px solid #ccc;background:#fff;padding:4px;">お名前</th>
