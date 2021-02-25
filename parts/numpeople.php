@@ -25,7 +25,7 @@
 
 <?php
 
-    $sql = "SELECT count(bath) as cnt FROM user WHERE bath is not null";
+    $sql = "SELECT count(*) as cnt FROM user WHERE bath is not null";
     $stmt = getDB()->prepare($sql);
     $stmt->execute();
     $row = $stmt->fetch();
