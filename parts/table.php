@@ -14,7 +14,9 @@
                 $notices=$row['notices'];
             
  ?>
+
 <tbody>
+
 <tr>
 
     <td style="height:50px;border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $name; ?></td>
@@ -29,10 +31,15 @@
         
      <td onclick="window.location='input/blood.php/<?php echo $id ?>/'"  
      style="border:1px solid #ccc;background:#fff;padding:4px;">
-     <?php if(isset($maxblood) || ($miniblood) ||( $pulse)){
+     
+     <?php if(isset($maxblood) || ($miniblood) ||($pulse)){
+     
          echo $maxblood."/".$miniblood."/".$pulse;
-     }
+     
+        }
+                    
      ?>
+             
      </td>
     
      <td style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $bath; ?></td>
@@ -40,10 +47,13 @@
      <td style="border:1px solid #ccc;background:#fff;padding:4px;"><?php echo $meal; ?></td>
         
      <td onclick="window.location='input/notices.php/<?php echo $id ?>/'"  style="border:1px solid #ccc;background:#fff;padding:4px;">
+     
      <?php if(!empty($notices)){echo '〇'; } ?>
+     
      </td>
         
 </tr>
+        
 </tbody>
 
 <?php 
