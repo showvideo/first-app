@@ -42,7 +42,7 @@ try {
 </div>
 
 <?php
-if(isset($_POST['maxblood'])){
+if(!empty($_POST['maxblood'])){
  
 try {
     $sql = "UPDATE user SET maxblood = :maxblood where id = :id";
@@ -61,7 +61,7 @@ try {
 
 
 <?php
-if(isset($_POST['miniblood'])){
+if(!empty($_POST['miniblood'])){
  
 try {
     $sql = "UPDATE user SET miniblood = :miniblood where id = :id";
@@ -80,7 +80,7 @@ try {
 
 
 <?php
-if(isset($_POST['pulse'])){
+if(!empty($_POST['pulse'])){
  
 try {
     $sql = "UPDATE user SET pulse = :pulse where id = :id";
